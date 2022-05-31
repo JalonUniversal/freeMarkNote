@@ -35,7 +35,9 @@ function App() {
       id: 123458
     },
   ]);
+  const handleInput = (val) => setValue(val);
   const handleCommit = () => {
+    if(value.trim().length === 0) return;
     setList(prev => {
       const ret = prev.concat([
         {
@@ -67,7 +69,12 @@ function App() {
       <Form layout='horizontal'>
         <Form.Item
           extra={
-            <Button color="primary" fill='outline' onClick={handleCommit}>
+            <Button 
+              color="primary" 
+              fill='outline'
+              onClick={handleCommit}
+              disabled={value?.trim().length === 0}
+            >
               添加
             </Button>
           }
@@ -76,7 +83,11 @@ function App() {
             placeholder='请输入内容'
             value={value}
             clearable
-            onChange={(val) => setValue(val)}
+            autoFocus 
+            autoComplete="off"
+            maxLength={255}
+            onChange={handleInput}
+            onEnterPress={handleCommit}
           />
         </Form.Item>
       </Form>
