@@ -10,7 +10,7 @@ const configModule =
     username: 'root',
     password: '778450y0uTXY!',
   },
-  remotePath: '/usr/www/github_demo',// 远程地址
+  remotePath: '/usr/www/free_mark_note',// 远程地址
   localPath:'build',// 本地地址
 }
 

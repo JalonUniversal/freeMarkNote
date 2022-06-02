@@ -2,6 +2,7 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') // css抽离
+const CompressionPlugin = require("compression-webpack-plugin");
 // const chalk = require('chalk')
 // const ProgressBarPlugin = require('progress-bar-webpack-plugin') // 编译进度条
 
@@ -56,6 +57,13 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
+    }),
+    new CompressionPlugin({
+      test: /\.(js|css)$/,
+      algorithm: "gzip",
+      threshold: 10240,
+      // minRatio: 0.8,
+      deleteOriginalAssets: false,
     }),
   ],
 }
