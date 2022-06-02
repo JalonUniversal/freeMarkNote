@@ -3,6 +3,8 @@ import './index.less';
 import { List, Input, Form, Button } from 'antd-mobile';
 import 'antd-mobile/es/global';
 import SafeProtection from '@/components/safeArea';
+import '../../locales';
+import { useTranslation } from 'react-i18next';
 
 import {
   UnorderedListOutline,
@@ -17,6 +19,7 @@ const iconMap = {
 }
 
 function App() {
+  const { t } = useTranslation();
   const [value, setValue] = useState('');
   const [list, setList] = useState([
     {
@@ -54,8 +57,8 @@ function App() {
   return (
     <div className='app-container'>
       <SafeProtection position="top" />
-      <h1>自由笔记</h1>
-      <List header='记录您的待办事项'>
+      <h1>{t('appName')}</h1>
+      <List header={t('title')}>
         {
           list.length > 0 && list.map((item, index) => {
             return (
@@ -73,14 +76,15 @@ function App() {
               color="primary" 
               fill='outline'
               onClick={handleCommit}
+              shape="rectangular"
               disabled={value?.trim().length === 0}
             >
-              添加
+              {t('add')}
             </Button>
           }
         >
           <Input
-            placeholder='请输入内容'
+            placeholder={t('placeholder')}
             value={value}
             clearable
             autoFocus 
