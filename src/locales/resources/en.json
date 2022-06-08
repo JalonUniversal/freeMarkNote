@@ -2,6 +2,7 @@
   "translation": {
     "appName": "Free Mark Note",
     "title": "Record Your MemoNotes",
+    "titleNoList": "Add Your MemoNotes",
     "add": "Add",
     "placeholder": "Please Input Your MemoNote"
   }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './index.less';
 import { List, Input, Form, Button } from 'antd-mobile';
-import 'antd-mobile/es/global';
 import SafeProtection from '@/components/safeArea';
 import '../../locales';
 import { useTranslation } from 'react-i18next';
+import { generateRandomId } from '@/utils';
 
 import { UnorderedListOutline, PayCircleOutline, SetOutline } from 'antd-mobile-icons';
 
@@ -14,26 +14,22 @@ const iconMap = {
   setting: <SetOutline />,
 };
 
+// enum ToDoType = {
+//   list = "list",
+//   asset = "asset",
+//   setting = "setting"
+// }
+
+// interface ToDoItem {
+//   type: ToDoType,
+//   name: string,
+//   id: number
+// }
+
 const App = () => {
   const { t } = useTranslation();
   const [value, setValue] = useState('');
-  const [list, setList] = useState([
-    {
-      type: 'list',
-      name: '账单',
-      id: 123456,
-    },
-    {
-      type: 'asset',
-      name: '总资产',
-      id: 123457,
-    },
-    {
-      type: 'setting',
-      name: '设置',
-      id: 123458,
-    },
-  ]);
+  const [list, setList] = useState([]);
   const handleInput = val => setValue(val);
   const handleCommit = () => {
     if (value.trim().length === 0) return;
@@ -42,7 +38,7 @@ const App = () => {
         {
           type: 'list',
           name: value,
-          id: Math.random(),
+          id: generateRandomId(),
         },
       ]);
       setValue('');
@@ -54,16 +50,19 @@ const App = () => {
     <div className='app-container'>
       <SafeProtection position='top' />
       <h1>{t('appName')}</h1>
-      <List header={t('title')}>
-        {list.length > 0 &&
-          list.map((item, index) => {
+      {list.length > 0 ? (
+        <List header={t('title')}>
+          {list.map((item, index) => {
             return (
               <List.Item key={index} prefix={iconMap[item.type]} onClick={() => {}}>
                 {item.name}
               </List.Item>
             );
           })}
-      </List>
+        </List>
+      ) : (
+        <div className='app-title-tips'>{t('titleNoList')}</div>
+      )}
       <Form layout='horizontal'>
         <Form.Item
           extra={

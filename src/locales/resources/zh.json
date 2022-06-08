@@ -2,6 +2,7 @@
   "translation": {
     "appName": "自由笔记",
     "title": "记录您的待办事项",
+    "titleNoList": "添加您的待办事项",
     "add": "添加",
     "placeholder": "请输入内容"
   }
