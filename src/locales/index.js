@@ -20,7 +20,7 @@ i18n
     debug: true,
     resources: {
       en,
-      zh,
+      zh
     },
     interpolation: {
       escapeValue: false,
