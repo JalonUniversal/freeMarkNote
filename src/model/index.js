@@ -1,7 +1,6 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-const Ctx = createContext({
-  
-});
+const context = createContext();
 
-export default Ctx;
+export const Provider = context.Provider;
+export const Consumer = context.Consumer;

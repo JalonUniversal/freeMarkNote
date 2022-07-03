@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './index.less';
 import { List, Input, Form, Button } from 'antd-mobile';
 import SafeProtection from '@/components/safeArea';
+import { Consumer } from '@/model';
 import '../../locales';
 import { useTranslation } from 'react-i18next';
 import { generateRandomId } from '@/utils';
@@ -28,12 +29,12 @@ const iconMap = {
 
 const App = () => {
   const { t } = useTranslation();
+  const { list, updateList } = useContext(Consumer);
   const [value, setValue] = useState('');
-  const [list, setList] = useState([]);
   const handleInput = val => setValue(val);
   const handleCommit = () => {
     if (value.trim().length === 0) return;
-    setList(prev => {
+    updateList(prev => {
       const ret = prev.concat([
         {
           type: 'list',
@@ -95,4 +96,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default React.memo(App);
