@@ -5,6 +5,7 @@ import SafeProtection from '@/components/safeArea';
 import { Consumer } from '@/model';
 import '../../locales';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { generateRandomId } from '@/utils';
 
 import { UnorderedListOutline, PayCircleOutline, SetOutline } from 'antd-mobile-icons';
@@ -30,6 +31,7 @@ const iconMap = {
 const App = () => {
   const { t } = useTranslation();
   const { list, updateList } = useContext(Consumer);
+  const navigate = useNavigate();
   const [value, setValue] = useState('');
   const handleInput = val => setValue(val);
   const handleCommit = () => {
@@ -46,6 +48,9 @@ const App = () => {
       return ret;
     });
   };
+  const handleOpenRecordDetail = id => {
+    navigate(`/record/:${id}`);
+  };
 
   return (
     <div className='app-container'>
@@ -55,7 +60,7 @@ const App = () => {
         <List header={t('title')}>
           {list.map((item, index) => {
             return (
-              <List.Item key={index} prefix={iconMap[item.type]} onClick={() => {}}>
+              <List.Item key={index} prefix={iconMap[item.type]} onClick={() => handleOpenRecordDetail(item.id)}>
                 {item.name}
               </List.Item>
             );
@@ -90,7 +95,6 @@ const App = () => {
           />
         </Form.Item>
       </Form>
-
       <SafeProtection position='bottom' />
     </div>
   );
