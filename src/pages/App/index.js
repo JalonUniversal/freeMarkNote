@@ -8,12 +8,10 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { generateRandomId } from '@/utils';
 
-import { UnorderedListOutline, PayCircleOutline, SetOutline } from 'antd-mobile-icons';
-
 const iconMap = {
-  list: <UnorderedListOutline />,
-  asset: <PayCircleOutline />,
-  setting: <SetOutline />,
+  list: <span className='iconfont icon-freea-jiepaiqi_huaban1' />,
+  asset: <span className='iconfont icon-freea-banzou_huaban1' />,
+  setting: <span className='iconfont icon-freea-yinfen_huaban1' />,
 };
 
 // enum ToDoType = {
@@ -55,7 +53,12 @@ const App = () => {
   return (
     <div className='app-container'>
       <SafeProtection position='top' />
-      <h1>{t('appName')}</h1>
+
+      <h1 className='app-name-title'>
+        {t('appName')}
+        <span className='iconfont icon-freea-bofang_huaban1' />
+      </h1>
+
       {list.length > 0 ? (
         <List header={t('title')}>
           {list.map((item, index) => {

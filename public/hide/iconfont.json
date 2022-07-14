@@ -1,0 +1,149 @@
+{
+  "id": "3522845",
+  "name": "freee mark note",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-free",
+  "description": "自由笔记图标库",
+  "glyphs": [
+    {
+      "icon_id": "29527175",
+      "name": "fanqu_画板 1",
+      "font_class": "a-fanqu_huaban1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "29527189",
+      "name": "bofang_画板 1",
+      "font_class": "a-bofang_huaban1",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "29527190",
+      "name": "banzou_画板 1",
+      "font_class": "a-banzou_huaban1",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "29527191",
+      "name": "hunxiang_画板 1",
+      "font_class": "a-hunxiang_huaban1",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "29527192",
+      "name": "yinse_画板 1",
+      "font_class": "a-yinse_huaban1",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "29527193",
+      "name": "yinfen_画板 1",
+      "font_class": "a-yinfen_huaban1",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "29527195",
+      "name": "zanting_画板 1",
+      "font_class": "a-zanting_huaban1",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "29527197",
+      "name": "liduquxian_画板 1",
+      "font_class": "a-liduquxian_huaban1",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "29527198",
+      "name": "jiepaiqi_画板 1",
+      "font_class": "a-jiepaiqi_huaban1",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "29527199",
+      "name": "hechang_画板 1",
+      "font_class": "a-hechang_huaban1",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "29527200",
+      "name": "luyinfang_画板 1",
+      "font_class": "a-luyinfang_huaban1",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "29656524",
+      "name": "文字",
+      "font_class": "wenzi-01",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "29656525",
+      "name": "亮度",
+      "font_class": "liangdu-01",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "29657126",
+      "name": "双钢琴",
+      "font_class": "shuanggangqin-01",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "29657127",
+      "name": "双键盘",
+      "font_class": "shuangjianpan-01",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "29657128",
+      "name": "双音色",
+      "font_class": "shuangyinse-01",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "29657129",
+      "name": "移调",
+      "font_class": "yitiao-01",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "29729921",
+      "name": "音量",
+      "font_class": "yinliang-01",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "29730194",
+      "name": "格调",
+      "font_class": "getiao-01",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "29730195",
+      "name": "蓝牙",
+      "font_class": "lanya-01",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    }
+  ]
+}
